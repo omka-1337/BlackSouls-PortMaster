@@ -8,13 +8,26 @@ Title: BLACK SOULS
 URL: https://store.steampowered.com/app/1424910/BLACK_SOULS/
 
 Instructions:
-The game is a paid title, so the engine ships on its own. Copy Audio/, Graphics/,
-Fonts/, Game.ini and Game.rgss3a from your own installation into the blacksouls
-folder, alongside the engine. Game.exe, System/ and installscript.vdf are Windows
-only and are not needed.
+Not ready to run. BLACK SOULS is a paid title, so this ships the engine only and
+you need your own copy to test. Copy Audio/, Graphics/, Fonts/, Game.ini and
+Game.rgss3a from your installation into the blacksouls folder, alongside the
+engine. Game.exe, System/ and installscript.vdf are Windows only and are not
+needed. Keep both Game.rgss3a and the loose Graphics folder: nine assets exist in
+both, and the loose copies are the English release's replacements.
 
-Engine is mkxp-z, so input goes through SDL_GameController natively and nothing is
-remapped. gptokeyb2 runs only for the Start+Select exit hotkey.
+Heads up: the game is adult content.
+
+Engine is mkxp-z (RPG Maker VX Ace / RGSS3), built for GLES with no gl4es. Input
+goes through SDL_GameController natively, so nothing is remapped and the bundled
+.ini is deliberately all blank; gptokeyb2 runs only for the Start+Select exit
+hotkey. The game renders at 640x480, so it is 1:1 on a 640x480 panel.
+
+Already confirmed on my own device (Anbernic RG40XX H, Knulli, H700 / Mali-G31,
+1GB RAM): boots, plays, battles work, saves work. Peak resident set measured at
+roughly 233 MB, so the 1GB devices should have room.
+
+What I cannot test myself: I only own this one device, so every other CFW below
+is open. Help very welcome.
 
 | Button | Action |
 |--|--|
