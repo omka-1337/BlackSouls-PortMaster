@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./BLACK SOULS.sh</path>
+    <name>BLACK SOULS</name>
+    <desc>Dark fairy-tale RPG set in a twisted retelling of Alice in Wonderland and the Brothers Grimm, built in RPG Maker VX Ace and running on mkxp-z. Turn-based battles with a heavily customised ATB system.</desc>
+    <releasedate>20200731T000000</releasedate>
+    <developer>OTAKU_Plan</developer>
+    <publisher>OTAKU_Plan</publisher>
+    <genre>Role-playing game (RPG)</genre>
+    <image>./blacksouls/screenshot.png</image>
+  </game>
+</gameList>
