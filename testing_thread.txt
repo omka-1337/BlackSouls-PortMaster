@@ -29,10 +29,14 @@ roughly 233 MB, so the 1GB devices should have room.
 What I cannot test myself: I only own this one device, so every other CFW below
 is open. Help very welcome.
 
+Face buttons: on my RG40XX H, Confirm lands on B and Cancel on A, which is the
+usual Nintendo-style layout on these handhelds. Nothing is remapped by the port,
+so please report what your device does if it differs.
+
 | Button | Action |
 |--|--|
-|A| Confirm |
-|B| Cancel, open menu |
+|B| Confirm |
+|A| Cancel, open menu |
 |X| Dash |
 |D-Pad| Move, menu navigation |
 |Start| Open menu |

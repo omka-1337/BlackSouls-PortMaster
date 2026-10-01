@@ -28,13 +28,6 @@
 
     // ~1100 asset files, cache the lookups.
     "pathCache": true,
-    "allowSymlinks": false,
+    "allowSymlinks": false
 
-    // Cosmetic labels in the F1 menu only.
-    "bindingNames": {
-        "c": "Confirm",
-        "b": "Cancel",
-        "a": "Menu",
-        "x": "Dash"
-    }
 }

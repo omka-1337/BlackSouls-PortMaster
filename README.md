@@ -13,10 +13,12 @@ The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no
 | Button | Action |
 |--|--|
 | D-Pad | Move, menu navigation |
-| A | Confirm |
-| B | Cancel, open menu |
+| B | Confirm |
+| A | Cancel, open menu |
 | X | Dash |
 | Start | Open menu |
+
+Face button positions vary between handhelds, so Confirm and Cancel may sit the other way round on your device. The port does not remap anything: mkxp-z reads the pad through `SDL_GameController`, and the mapping comes from the firmware's own controller database.
 
 ## Compile
 
