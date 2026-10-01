@@ -1,0 +1,18 @@
+# Game files — the game is paid, users supply their own copy.
+blacksouls/Audio/
+blacksouls/Graphics/
+blacksouls/Fonts/
+blacksouls/Game.ini
+blacksouls/Game.rgss3a
+blacksouls/Game.exe
+blacksouls/System/
+blacksouls/Bonus/
+
+# Runtime artefacts
+blacksouls/stdlib/
+blacksouls/Save*.rvdata2
+blacksouls/log.txt
+
+# Build output
+dist/
+*.zip
