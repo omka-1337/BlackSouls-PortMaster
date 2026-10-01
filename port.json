@@ -8,7 +8,9 @@
     "items_opt": null,
     "attr": {
         "title": "BLACK SOULS",
-        "porter": "Omka1337",
+        "porter": [
+            "Omka1337"
+        ],
         "desc": "Dark fairy-tale RPG Maker VX Ace game set in a twisted retelling of Alice in Wonderland, running on mkxp-z.",
         "desc_md": null,
         "inst": "Copy Audio/, Graphics/, Fonts/, Game.ini and Game.rgss3a from the Steam installation directly into the blacksouls/ folder, alongside the engine.",

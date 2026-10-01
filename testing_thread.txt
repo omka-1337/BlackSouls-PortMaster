@@ -1,0 +1,41 @@
+Instructions to install the Testing Zip:
+Drop the .zip into your Portmaster autoinstall folder and run Portmaster.
+or
+run via ssh: harbourmaster install "zip url from discord"
+
+Game Information
+Title: BLACK SOULS
+URL: https://store.steampowered.com/app/1424910/BLACK_SOULS/
+
+Instructions:
+The game is a paid title, so the engine ships on its own. Copy Audio/, Graphics/,
+Fonts/, Game.ini and Game.rgss3a from your own installation into the blacksouls
+folder, alongside the engine. Game.exe, System/ and installscript.vdf are Windows
+only and are not needed.
+
+Engine is mkxp-z, so input goes through SDL_GameController natively and nothing is
+remapped. gptokeyb2 runs only for the Start+Select exit hotkey.
+
+| Button | Action |
+|--|--|
+|A| Confirm |
+|B| Cancel, open menu |
+|X| Dash |
+|D-Pad| Move, menu navigation |
+|Start| Open menu |
+
+CFW Tests:
+[ ] AmberELEC
+[ ] dArkOS
+[ ] MuOS
+ROCKNIX
+-> [ ] Libmali
+-> [ ] Panfrost
+-> [ ] Adreno (Optional)
+[x] Knulli
+
+Resolutions:
+[ ] 480x320 (Optional)
+[x] 640x480
+[ ] 720x720 (RGB30) (Optional)
+[ ] Higher resolutions (e.g., 1280)
