@@ -6,39 +6,34 @@ run via ssh: harbourmaster install "zip url from discord"
 Game Information
 Title: BLACK SOULS
 URL: https://store.steampowered.com/app/1424910/BLACK_SOULS/
+Port: https://github.com/omka-1337/BlackSouls-PortMaster
 
 Instructions:
-Not ready to run, and the game is adult content. BLACK SOULS is a paid title, so
-this ships the engine only and you need your own copy to test. Copy Audio/,
-Graphics/, Fonts/, Game.ini and Game.rgss3a into the blacksouls folder, alongside
-the engine. Game.exe, System/ and installscript.vdf are Windows only. Keep both
-Game.rgss3a and the loose Graphics folder: nine assets exist in both, and the loose
-copies are the English release's replacements.
+Not ready to run, and the game is adult content. It is a paid title, so this ships
+the engine only and you need your own copy. Copy Audio/, Graphics/, Fonts/,
+Game.ini and Game.rgss3a into the blacksouls folder. Keep both Game.rgss3a and the
+loose Graphics folder: nine assets exist in both and the loose copies win.
 
-Engine is mkxp-z (RPG Maker VX Ace / RGSS3), GLES, no gl4es. Input goes through
-SDL_GameController natively, so nothing is remapped and the bundled .ini is
-deliberately blank; gptokeyb2 runs only for the Start+Select exit hotkey. The game
-renders at 640x480.
+Engine is mkxp-z (VX Ace / RGSS3), GLES, no gl4es. Input is native
+SDL_GameController, so nothing is remapped and the .ini is deliberately blank;
+gptokeyb2 only provides Start+Select. Renders at 640x480.
 
 Tested on my RG40XX H (Knulli, H700 / Mali-G31, 1GB): boots, plays, battles and
-saves all work, peak resident set around 233 MB. It is the only device I own, so
-every other CFW below is open. Help welcome.
+saves work, peak RSS around 233 MB. Only device I own, so every other CFW is open.
 
-One Knulli oddity, likely not port related: a few seconds after exiting, the
-firmware runs its own save routine and draws a progress screen. Relaunching inside
-that window leaves both drawing at once and the picture tears. Waiting it out
-clears it. Please say if another CFW does the same.
+Knulli oddity, likely not the port: a few seconds after exit the firmware draws its
+own save progress screen. Relaunching inside that window makes both draw at once
+and the picture tears. Waiting it out clears it.
 
 | Button | Action |
 |--|--|
 |B| Confirm |
-|A| Cancel, open menu |
+|A| Cancel, menu |
 |X| Dash |
-|D-Pad| Move, menu navigation |
-|Start| Open menu |
+|D-Pad| Move |
+|Start| Menu |
 
-Face buttons follow the Nintendo-style layout on my device, so Confirm sits on B.
-Nothing is remapped by the port, so report what yours does if it differs.
+Face buttons are Nintendo-style here, so Confirm is on B. Report if yours differs.
 
 CFW Tests:
 [ ] AmberELEC
