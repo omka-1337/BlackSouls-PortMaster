@@ -8,37 +8,26 @@ Title: BLACK SOULS
 URL: https://store.steampowered.com/app/1424910/BLACK_SOULS/
 
 Instructions:
-Not ready to run. BLACK SOULS is a paid title, so this ships the engine only and
-you need your own copy to test. Copy Audio/, Graphics/, Fonts/, Game.ini and
-Game.rgss3a from your installation into the blacksouls folder, alongside the
-engine. Game.exe, System/ and installscript.vdf are Windows only and are not
-needed. Keep both Game.rgss3a and the loose Graphics folder: nine assets exist in
-both, and the loose copies are the English release's replacements.
+Not ready to run, and the game is adult content. BLACK SOULS is a paid title, so
+this ships the engine only and you need your own copy to test. Copy Audio/,
+Graphics/, Fonts/, Game.ini and Game.rgss3a into the blacksouls folder, alongside
+the engine. Game.exe, System/ and installscript.vdf are Windows only. Keep both
+Game.rgss3a and the loose Graphics folder: nine assets exist in both, and the loose
+copies are the English release's replacements.
 
-Heads up: the game is adult content.
+Engine is mkxp-z (RPG Maker VX Ace / RGSS3), GLES, no gl4es. Input goes through
+SDL_GameController natively, so nothing is remapped and the bundled .ini is
+deliberately blank; gptokeyb2 runs only for the Start+Select exit hotkey. The game
+renders at 640x480.
 
-Engine is mkxp-z (RPG Maker VX Ace / RGSS3), built for GLES with no gl4es. Input
-goes through SDL_GameController natively, so nothing is remapped and the bundled
-.ini is deliberately all blank; gptokeyb2 runs only for the Start+Select exit
-hotkey. The game renders at 640x480, so it is 1:1 on a 640x480 panel.
+Tested on my RG40XX H (Knulli, H700 / Mali-G31, 1GB): boots, plays, battles and
+saves all work, peak resident set around 233 MB. It is the only device I own, so
+every other CFW below is open. Help welcome.
 
-Already confirmed on my own device (Anbernic RG40XX H, Knulli, H700 / Mali-G31,
-1GB RAM): boots, plays, battles work, saves work. Peak resident set measured at
-roughly 233 MB, so the 1GB devices should have room.
-
-Known issue, not port related: on Knulli, a few seconds after the port exits, the
-firmware runs its own save routine and draws a progress screen over the display.
-Relaunching inside that window leaves both drawing at once, so the picture tears,
-the frontend shows through and input reaches both. Waiting for that screen to
-finish clears it. Nothing of the port is still running at that point. I have only
-seen this on Knulli, so please say if another CFW does the same.
-
-What I cannot test myself: I only own this one device, so every other CFW below
-is open. Help very welcome.
-
-Face buttons: on my RG40XX H, Confirm lands on B and Cancel on A, which is the
-usual Nintendo-style layout on these handhelds. Nothing is remapped by the port,
-so please report what your device does if it differs.
+One Knulli oddity, likely not port related: a few seconds after exiting, the
+firmware runs its own save routine and draws a progress screen. Relaunching inside
+that window leaves both drawing at once and the picture tears. Waiting it out
+clears it. Please say if another CFW does the same.
 
 | Button | Action |
 |--|--|
@@ -47,6 +36,9 @@ so please report what your device does if it differs.
 |X| Dash |
 |D-Pad| Move, menu navigation |
 |Start| Open menu |
+
+Face buttons follow the Nintendo-style layout on my device, so Confirm sits on B.
+Nothing is remapped by the port, so report what yours does if it differs.
 
 CFW Tests:
 [ ] AmberELEC
