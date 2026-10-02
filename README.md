@@ -4,6 +4,8 @@ Thanks to [Eeny, meeny, miny, moe?](https://store.steampowered.com/app/3755860/B
 
 The game is a paid title, so this port ships the engine only. Copy `Audio/`, `Graphics/`, `Fonts/`, `Game.ini` and `Game.rgss3a` from your own installation into the `blacksouls` folder, alongside the engine. `Game.exe`, `System/` and `installscript.vdf` are Windows only and are not needed.
 
+The Steam release ships a heavily reduced build of the game: its `Game.rgss3a` declares 21 maps where the original release has 150. The publisher offers a free official patch that restores the full game, and it has to be applied to the Steam copy before the files are worth copying here, otherwise the port faithfully runs the reduced build. A copy bought on DLsite is complete as it is. This port was built and tested against the English Steam files.
+
 Copy the loose `Graphics/` folder as well. Nine assets exist both there and inside `Game.rgss3a`, and under mkxp-z the archive wins, so those loose copies are inert; they are kept only so the folder matches an untouched installation. To override anything in the archive, use `patches/` instead, as described below.
 
 The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
