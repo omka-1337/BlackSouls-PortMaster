@@ -10,13 +10,23 @@ The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no
 
 ## Translations
 
-Anything placed in `blacksouls/patches/` is mounted above `Game.rgss3a`, so a translation can replace the game's data without the archive being touched or removed. The folder is empty by default, which leaves the game in English.
+`blacksouls/patches/` is mounted above `Game.rgss3a`, so a translation can replace the game's data without the archive being removed or touched. The folder is empty by default, which leaves the game in English.
 
-To install the Russian translation, extract the contents of `BSRUv1.12.zip` into `blacksouls/patches/` so that `patches/Data/`, `patches/Graphics/` and the rest sit directly inside it. Remove them again to go back to English.
+Translations are distributed as a set of RPG Maker folders. Put the content folders directly inside `patches/`:
 
-That translation ships a Steamworks achievements script which calls `Win32API` at load time and would otherwise kill the game at startup; `win32stub.rb` neutralises it.
+```
+patches/
+├── Data/
+├── Graphics/
+├── Audio/     (only if the translation ships one)
+└── Fonts/     (only if the translation ships one)
+```
 
-Verified as far as the title screen and the opening scene, on the x86_64 build of the same mkxp-z version. Battles and later maps were not played through in Russian.
+Some archives wrap everything in a single top level folder, in which case copy that folder's contents rather than the folder itself. Leave out anything Windows specific: `Game.exe`, `System/`, `*.dll`, `*.vdf`, `Game.rvproj2` and the translation's own `Game.ini` are all unused here. Delete the folders again to go back to English.
+
+Translations commonly bundle RGSS scripts that call `Win32API` while loading, such as Steamworks achievements or the Fullscreen++ plugin. There is no Windows DLL to load on this platform, so those calls would kill the game before the title screen; `win32stub.rb` makes them inert. Fullscreen is handled by `mkxp.json` anyway, so losing that plugin changes nothing.
+
+Two Russian translations were checked and both reached normal gameplay: one as a `patches/` overlay with the archive in place, the other as a complete game folder. Both runs used the x86_64 build of the same mkxp-z version, and neither was played past the opening scene, so battles and later maps are untested in translation.
 
 ## Controls
 
