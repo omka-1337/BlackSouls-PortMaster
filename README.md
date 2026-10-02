@@ -4,9 +4,19 @@ Thanks to [Eeny, meeny, miny, moe?](https://store.steampowered.com/app/3755860/B
 
 The game is a paid title, so this port ships the engine only. Copy `Audio/`, `Graphics/`, `Fonts/`, `Game.ini` and `Game.rgss3a` from your own installation into the `blacksouls` folder, alongside the engine. `Game.exe`, `System/` and `installscript.vdf` are Windows only and are not needed.
 
-Keep both `Game.rgss3a` and the loose `Graphics/` folder. Nine assets exist in both, and the loose copies are the English release's replacements; mkxp-z gives loose files priority over the archive, which is what the Windows build does too.
+Copy the loose `Graphics/` folder as well. Nine assets exist both there and inside `Game.rgss3a`, and under mkxp-z the archive wins, so those loose copies are inert; they are kept only so the folder matches an untouched installation. To override anything in the archive, use `patches/` instead, as described below.
 
 The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
+
+## Translations
+
+Anything placed in `blacksouls/patches/` is mounted above `Game.rgss3a`, so a translation can replace the game's data without the archive being touched or removed. The folder is empty by default, which leaves the game in English.
+
+To install the Russian translation, extract the contents of `BSRUv1.12.zip` into `blacksouls/patches/` so that `patches/Data/`, `patches/Graphics/` and the rest sit directly inside it. Remove them again to go back to English.
+
+That translation ships a Steamworks achievements script which calls `Win32API` at load time and would otherwise kill the game at startup; `win32stub.rb` neutralises it.
+
+Verified as far as the title screen and the opening scene, on the x86_64 build of the same mkxp-z version. Battles and later maps were not played through in Russian.
 
 ## Controls
 

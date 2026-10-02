@@ -26,6 +26,12 @@ cp -r blacksouls/. dist/stage/blacksouls/
 rm -rf dist/stage/blacksouls/stdlib dist/stage/blacksouls/log.txt
 rm -f dist/stage/blacksouls/Save*.rvdata2
 
+# patches/ is the user's translation slot. Ship the empty folder, never whatever
+# a local install happens to have dropped into it.
+rm -rf dist/stage/blacksouls/patches
+mkdir -p dist/stage/blacksouls/patches
+touch dist/stage/blacksouls/patches/.gitkeep
+
 python3 - <<'PY'
 import os, stat, zipfile
 

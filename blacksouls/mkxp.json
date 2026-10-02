@@ -26,6 +26,14 @@
         "UmePlus Gothic>VL Gothic"
     ],
 
+    // Loaded before the game scripts; see win32stub.rb for why.
+    "preloadScript": ["win32stub.rb"],
+
+    // Anything dropped into patches/ is mounted above Game.rgss3a, which is how
+    // the optional translation replaces the game's data without touching the
+    // archive. Empty by default, which leaves the game exactly as shipped.
+    "patches": ["patches"],
+
     // ~1100 asset files, cache the lookups.
     "pathCache": true,
     "allowSymlinks": false
