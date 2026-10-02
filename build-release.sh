@@ -30,7 +30,7 @@ rm -f dist/stage/blacksouls/Save*.rvdata2
 # a local install happens to have dropped into it.
 rm -rf dist/stage/blacksouls/patches
 mkdir -p dist/stage/blacksouls/patches
-touch dist/stage/blacksouls/patches/.gitkeep
+cp blacksouls/patches/README.txt dist/stage/blacksouls/patches/
 
 python3 - <<'PY'
 import os, stat, zipfile

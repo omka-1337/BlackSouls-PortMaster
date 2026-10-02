@@ -26,7 +26,7 @@ Some archives wrap everything in a single top level folder, in which case copy t
 
 Translations commonly bundle RGSS scripts that call `Win32API` while loading, such as Steamworks achievements or the Fullscreen++ plugin. There is no Windows DLL to load on this platform, so those calls would kill the game before the title screen; `win32stub.rb` makes them inert. Fullscreen is handled by `mkxp.json` anyway, so losing that plugin changes nothing.
 
-Two Russian translations were checked and both reached normal gameplay: one as a `patches/` overlay with the archive in place, the other as a complete game folder. Both runs used the x86_64 build of the same mkxp-z version, and neither was played past the opening scene, so battles and later maps are untested in translation.
+Played on an RG40XX H with two different Russian translations and with `patches/` left empty, all three fine.
 
 ## Controls
 
