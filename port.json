@@ -22,7 +22,13 @@
         "rtr": false,
         "exp": false,
         "runtime": [],
-        "store": [],
+        "store": [
+            {
+                "name": "Steam",
+                "gameurl": "https://store.steampowered.com/app/3755860/BLACK_SOULS/",
+                "developerurl": "https://store.steampowered.com/publisher/otakuplan"
+            }
+        ],
         "availability": "paid",
         "reqs": [],
         "arch": [
