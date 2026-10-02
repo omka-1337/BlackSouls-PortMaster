@@ -30,8 +30,8 @@ translation never touches them. A save does store objects of the classes the
 game's scripts define, though, so a translation that adds such a class makes its
 saves unreadable once it is removed, and the other way round.
 
-Whether it bites depends on the translation. Both Russian ones tested here add
-nothing that reaches a save, so the same save loaded fine with and without them.
+Whether it bites depends on the translation, and neither of the ones used here
+did: the same save loaded with and without them.
 
 When it does bite the game says nothing. It plays a buzzer on the load screen
 and stays where it is, which looks like the button did nothing. Put the
