@@ -26,6 +26,13 @@ Already confirmed on my own device (Anbernic RG40XX H, Knulli, H700 / Mali-G31,
 1GB RAM): boots, plays, battles work, saves work. Peak resident set measured at
 roughly 233 MB, so the 1GB devices should have room.
 
+Known issue, not port related: on Knulli, a few seconds after the port exits, the
+firmware runs its own save routine and draws a progress screen over the display.
+Relaunching inside that window leaves both drawing at once, so the picture tears,
+the frontend shows through and input reaches both. Waiting for that screen to
+finish clears it. Nothing of the port is still running at that point. I have only
+seen this on Knulli, so please say if another CFW does the same.
+
 What I cannot test myself: I only own this one device, so every other CFW below
 is open. Help very welcome.
 
