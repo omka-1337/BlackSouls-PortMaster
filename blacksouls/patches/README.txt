@@ -20,8 +20,25 @@ contents, not the folder itself.
 Do not copy anything Windows specific. Game.exe, System/, *.dll, *.vdf,
 Game.rvproj2 and the translation's own Game.ini are all unused here.
 
-Delete these folders again to go back to English. Save files live one level up,
-next to the engine, so they are not affected either way.
+Delete these folders again to go back to English.
+
+
+A SAVE CAN STOP LOADING WHEN YOU CHANGE THIS FOLDER
+
+Save files live one level up, next to the engine, and adding or removing a
+translation never touches them. A save does store objects of the classes the
+game's scripts define, though, so a translation that adds such a class makes its
+saves unreadable once it is removed, and the other way round.
+
+Whether it bites depends on the translation. Both Russian ones tested here add
+nothing that reaches a save, so the same save loaded fine with and without them.
+
+When it does bite the game says nothing. It plays a buzzer on the load screen
+and stays where it is, which looks like the button did nothing. Put the
+translation back the way it was when the save was made and it will load.
+
+So before changing this folder, either finish what you are playing or keep a
+copy of the saves.
 
 
 WHY WIN32API IS STUBBED
