@@ -16,3 +16,6 @@ blacksouls/log.txt
 # Build output
 dist/
 *.zip
+
+# Other
+testing_thread.txt
