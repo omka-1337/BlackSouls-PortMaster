@@ -12,25 +12,25 @@ Copy the loose `Graphics/` folder as well. Nine assets exist both there and insi
 
 The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
 
-## Translations
+## The patches folder
 
-`blacksouls/patches/` is mounted above `Game.rgss3a`, so a translation can replace the game's data without the archive being removed or touched. The folder is empty by default, which leaves the game in English.
+`blacksouls/patches/` is mounted above `Game.rgss3a`. A loose folder next to the engine is not: where the same file exists in both, the archive wins. So anything meant to replace the game's own content goes in `patches/`, and the folder is empty by default, which leaves the game exactly as shipped.
 
-Translations are distributed as a set of RPG Maker folders. Put the content folders directly inside `patches/`:
+Two things usually go in it: the publisher's free patch for the reduced Steam build, and a translation. Both arrive as a set of RPG Maker folders. Put their content folders directly inside `patches/`:
 
 ```
 patches/
 ├── Data/
 ├── Graphics/
-├── Audio/     (only if the translation ships one)
-└── Fonts/     (only if the translation ships one)
+├── Audio/     (only if it ships one)
+└── Fonts/     (only if it ships one)
 ```
 
-Some archives wrap everything in a single top level folder, in which case copy that folder's contents rather than the folder itself. Leave out anything Windows specific: `Game.exe`, `System/`, `*.dll`, `*.vdf`, `Game.rvproj2` and the translation's own `Game.ini` are all unused here. Delete the folders again to go back to English.
+Some archives wrap everything in a single top level folder, in which case copy that folder's contents rather than the folder itself. Leave out anything Windows specific: `Game.exe`, `System/`, `*.dll`, `*.vdf`, `Game.rvproj2` and its own `Game.ini` are all unused here. Delete the folders again to go back.
 
-A save can stop loading when you change this folder. Saves sit next to the engine and are never touched by adding or removing a translation, but a save stores objects of the classes the game's scripts define, so a translation that adds such a class makes its saves unreadable once it is removed, and the other way round. Whether it bites depends on the translation, and neither of the ones used here did: the same save loaded with and without them. The game stays quiet when it does bite: `DataManager.load_game` swallows the error, so the load screen buzzes and sits there as though the button did nothing. Restore the translation to the state the save was made in and it loads. This is how the game behaves on Windows too.
+A save can stop loading when you change this folder. Saves sit next to the engine and are never touched by what you put here, but a save stores objects of the classes the game's scripts define, so content that adds such a class makes its saves unreadable once it is removed, and the other way round. Whether it bites depends on what you installed, and neither of the translations used here did: the same save loaded with and without them. The game stays quiet when it does bite: `DataManager.load_game` swallows the error, so the load screen buzzes and sits there as though the button did nothing. Put the folder back the way it was when the save was made and it loads. This is how the game behaves on Windows too.
 
-Translations commonly bundle RGSS scripts that call `Win32API` while loading, such as Steamworks achievements or the Fullscreen++ plugin. There is no Windows DLL to load on this platform, so those calls would kill the game before the title screen; `win32stub.rb` makes them inert. Fullscreen is handled by `mkxp.json` anyway, so losing that plugin changes nothing.
+Content dropped here commonly bundles RGSS scripts that call `Win32API` while loading, such as Steamworks achievements or the Fullscreen++ plugin. There is no Windows DLL to load on this platform, so those calls would kill the game before the title screen; `win32stub.rb` makes them inert. Fullscreen is handled by `mkxp.json` anyway, so losing that plugin changes nothing.
 
 Played on an RG40XX H with two different Russian translations and with `patches/` left empty, all three fine.
 
