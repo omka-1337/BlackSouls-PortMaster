@@ -1,50 +1,25 @@
-This folder is mounted above Game.rgss3a, so anything placed here replaces the
-game's own files without the archive being removed or touched.
+This folder is mounted above Game.rgss3a. A loose folder next to the engine is
+not: where the same file exists in both, the archive wins. So anything meant to
+replace the game's own content goes in here.
 
-Leave it empty and the game runs as shipped, in English.
-
-
-INSTALLING A TRANSLATION
-
-Put the translation's content folders directly inside this folder:
+Two things usually do: the publisher's free patch for the reduced Steam build,
+and a translation. Put their content folders directly inside this one.
 
     patches/
     |-- Data/
     |-- Graphics/
-    |-- Audio/     (only if the translation ships one)
-    `-- Fonts/     (only if the translation ships one)
+    |-- Audio/     (only if it ships one)
+    `-- Fonts/     (only if it ships one)
 
-Some archives wrap everything in a single top level folder. Copy that folder's
-contents, not the folder itself.
+If the patch updated Game.rgss3a itself rather than leaving loose folders, copy
+that archive over instead and leave this folder alone.
 
-Do not copy anything Windows specific. Game.exe, System/, *.dll, *.vdf,
-Game.rvproj2 and the translation's own Game.ini are all unused here.
+If an archive wraps everything in one top level folder, copy that folder's
+contents, not the folder itself. Leave out Game.exe, System/, *.dll, *.vdf,
+Game.rvproj2 and its own Game.ini. Delete the folders to go back.
 
-Delete these folders again to go back to English.
+Back up your saves before changing this folder. A save can stop loading once it
+changes, and the game says nothing: the load screen just buzzes and stays there.
+Putting things back the way they were when the save was made fixes it.
 
-
-A SAVE CAN STOP LOADING WHEN YOU CHANGE THIS FOLDER
-
-Save files live one level up, next to the engine, and adding or removing a
-translation never touches them. A save does store objects of the classes the
-game's scripts define, though, so a translation that adds such a class makes its
-saves unreadable once it is removed, and the other way round.
-
-Whether it bites depends on the translation, and neither of the ones used here
-did: the same save loaded with and without them.
-
-When it does bite the game says nothing. It plays a buzzer on the load screen
-and stays where it is, which looks like the button did nothing. Put the
-translation back the way it was when the save was made and it will load.
-
-So before changing this folder, either finish what you are playing or keep a
-copy of the saves.
-
-
-WHY WIN32API IS STUBBED
-
-Translations often bundle RGSS scripts that call Win32API while loading, such as
-Steamworks achievements or the Fullscreen++ plugin. There is no Windows DLL to
-load on this platform, so those calls would kill the game before the title
-screen. win32stub.rb, one level up, makes them inert. Fullscreen is handled by
-mkxp.json anyway.
+See README.md one level up for the rest.
