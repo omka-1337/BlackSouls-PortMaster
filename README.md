@@ -2,15 +2,66 @@
 
 Thanks to [Eeny, meeny, miny, moe?](https://store.steampowered.com/app/3755860/BLACK_SOULS/) for creating BLACK SOULS, a bleak retelling of Alice in Wonderland and the Brothers Grimm whose fairy tale characters hold real, tracked relationships with you that quietly reshape how the story ends.
 
-The game is a paid title, so this port ships the engine only. Copy `Audio/`, `Graphics/`, `Fonts/`, `Game.ini` and `Game.rgss3a` from your own installation into the `blacksouls` folder, alongside the engine. `Game.exe`, `System/` and `installscript.vdf` are Windows only and are not needed.
+**Playable.** Boots, plays, fights, saves and loads on an RG40XX H. Confirmed on KNULLI, on ROCKNIX with the Panfrost driver, and on muOS by a tester.
 
-The Steam release ships a heavily reduced build of the game: its `Game.rgss3a` declares 21 maps where the original release has 150. The publisher offers a free official patch that restores the full game, and it has to be applied to the Steam copy before the files are worth copying here, otherwise the port faithfully runs the reduced build. A copy bought on DLsite is complete as it is. This port was built and tested against the English Steam files.
+The game is paid, so only the engine ships here: mkxp-z, an open reimplementation of the RGSS runtime that RPG Maker VX Ace games run on. You supply the game's own files. The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
 
-Note where the patched content ends up. If applying the patch updates `Game.rgss3a` itself, copy that archive across as usual. If it instead leaves loose `Data/`, `Graphics/` or `Audio/` folders beside the archive, those go into `patches/` rather than next to the engine: where the same file exists in both, the archive wins, so copying them alongside the engine would silently leave the reduced build running.
+## Contents
 
-Copy the loose `Graphics/` folder as well. Nine assets exist both there and inside `Game.rgss3a`, and under mkxp-z the archive wins, so those loose copies are inert; they are kept only so the folder matches an untouched installation. To override anything in the archive, use `patches/` instead, as described below.
+- [Installing](#installing)
+  - [1. Install the port](#1-install-the-port)
+  - [2. Complete your copy of the game](#2-complete-your-copy-of-the-game)
+  - [3. Copy the game across](#3-copy-the-game-across)
+  - [4. Play](#4-play)
+- [The patches folder](#the-patches-folder)
+- [Controls](#controls)
+- [Compile](#compile)
 
-The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
+## Installing
+
+You need: your own copy of BLACK SOULS, a PC to prepare it on, and a handheld running PortMaster. Budget twenty minutes, nearly all of it copying files.
+
+### 1. Install the port
+
+Drop `blacksouls.zip` into PortMaster's `autoinstall` folder and run PortMaster, which unpacks it and clears the folder.
+
+Over ssh it is one command instead:
+
+```
+harbourmaster install <url of the zip>
+```
+
+Either way you end up with `BLACK SOULS.sh` and a `blacksouls/` folder in `ports/`. The folder holds the engine and waits for the game.
+
+### 2. Complete your copy of the game
+
+Skip this step if you bought the game on DLsite, which ships it complete.
+
+The Steam release is cut down: its `Game.rgss3a` declares 21 maps where the full release has 150. The publisher gives away an official patch that restores the rest, and it has to be applied to the Steam copy on your PC before the files are worth copying anywhere. Without it the port faithfully runs the reduced build, and nothing about that looks broken, which is the confusing part.
+
+Note where the patch puts what it restores. If it updates `Game.rgss3a` itself, you are done here. If it instead leaves loose `Data/`, `Graphics/` or `Audio/` folders beside the archive, those belong in `patches/` rather than next to the engine, for the reason in [The patches folder](#the-patches-folder).
+
+### 3. Copy the game across
+
+From your game folder, copy into `ports/blacksouls/`, alongside the engine:
+
+```
+Audio/
+Graphics/
+Fonts/
+Game.ini
+Game.rgss3a
+```
+
+Leave behind `Game.exe`, `System/` and `installscript.vdf`. They are Windows only and the engine replaces them.
+
+Copy the loose `Graphics/` folder even though nine of its files also exist inside `Game.rgss3a` and the archive wins for those nine. The rest of the folder is used, and keeping it whole means your port folder matches an untouched installation.
+
+### 4. Play
+
+Launch BLACK SOULS from the Ports menu. First run unpacks the Ruby standard library, so it takes a few seconds longer than the ones after it.
+
+Saves are written next to the engine as `Save01.rvdata2` and upward. They survive reinstalling the port, as long as you keep that folder.
 
 ## The patches folder
 
