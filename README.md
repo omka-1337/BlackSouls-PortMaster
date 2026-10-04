@@ -55,6 +55,8 @@ Game.rgss3a
 
 Leave behind `Game.exe`, `System/` and `installscript.vdf`. They are Windows only and the engine replaces them.
 
+Some copies ship unpacked, with a `Data/` folder in place of `Game.rgss3a`. Copy that folder instead; the port accepts either, and the Korean release is one of them.
+
 Copy the loose `Graphics/` folder even though nine of its files also exist inside `Game.rgss3a` and the archive wins for those nine. The rest of the folder is used, and keeping it whole means your port folder matches an untouched installation.
 
 ### 4. Play
