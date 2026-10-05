@@ -21,7 +21,7 @@ rm -rf dist
 mkdir -p dist/stage/blacksouls
 
 cp "BLACK SOULS.sh" dist/stage/
-cp port.json README.md gameinfo.xml screenshot.png cover.png dist/stage/blacksouls/
+cp port.json README.md gameinfo.xml screenshot.png dist/stage/blacksouls/
 cp -r blacksouls/. dist/stage/blacksouls/
 rm -rf dist/stage/blacksouls/stdlib dist/stage/blacksouls/log.txt
 rm -f dist/stage/blacksouls/Save*.rvdata2
