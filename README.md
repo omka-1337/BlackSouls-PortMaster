@@ -2,7 +2,7 @@
 
 Thanks to [Eeny, meeny, miny, moe?](https://store.steampowered.com/app/3755860/BLACK_SOULS/) for creating BLACK SOULS, a bleak retelling of Alice in Wonderland and the Brothers Grimm whose fairy tale characters hold real, tracked relationships with you that quietly reshape how the story ends.
 
-**Playable.** Boots, plays, fights, saves and loads on an RG40XX H. Confirmed on KNULLI, on ROCKNIX with the Panfrost driver, and on muOS and dArkOS by testers, the last of those on an R36S, which is a different SoC entirely.
+**Playable.** Boots, plays, fights, saves and loads on an RG40XX H. Confirmed on KNULLI, on ROCKNIX with the Panfrost driver, and on muOS, dArkOS and AmberELEC by testers, the last two on an R36S, which is a different SoC entirely.
 
 The game is paid, so only the engine ships here: mkxp-z, an open reimplementation of the RGSS runtime that RPG Maker VX Ace games run on. You supply the game's own files. The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
 
@@ -69,7 +69,7 @@ Saves are written next to the engine as `Save01.rvdata2` and upward. They surviv
 
 `blacksouls/patches/` is mounted above `Game.rgss3a`. A loose folder next to the engine is not: where the same file exists in both, the archive wins. So anything meant to replace the game's own content goes in `patches/`, and the folder is empty by default, which leaves the game exactly as shipped.
 
-Two things usually go in it: the publisher's free patch for the reduced Steam build, and a translation. Both arrive as a set of RPG Maker folders. Put their content folders directly inside `patches/`:
+Two things usually go in it: the publisher's free patch for the reduced Steam build, and a translation that replaces only part of the game. Both arrive as a set of RPG Maker folders. Put their content folders directly inside `patches/`:
 
 ```
 patches/
@@ -80,6 +80,8 @@ patches/
 ```
 
 Some archives wrap everything in a single top level folder, in which case copy that folder's contents rather than the folder itself. Leave out anything Windows specific: `Game.exe`, `System/`, `*.dll`, `*.vdf`, `Game.rvproj2` and its own `Game.ini` are all unused here. Delete the folders again to go back.
+
+A translation that ships the whole game instead, with its own `Data`, `Graphics` and `Audio`, is not an overlay. Put it in the port folder as the game and leave `patches/` empty. Keeping both costs twice the space for nothing.
 
 A save can stop loading when you change this folder. Saves sit next to the engine and are never touched by what you put here, but a save stores objects of the classes the game's scripts define, so content that adds such a class makes its saves unreadable once it is removed, and the other way round. Whether it bites depends on what you installed, and neither of the translations used here did: the same save loaded with and without them. The game stays quiet when it does bite: `DataManager.load_game` swallows the error, so the load screen buzzes and sits there as though the button did nothing. Put the folder back the way it was when the save was made and it loads. This is how the game behaves on Windows too.
 
