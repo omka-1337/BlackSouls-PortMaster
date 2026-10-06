@@ -6,10 +6,10 @@ The game is paid, so only the engine ships here: mkxp-z, an open reimplementatio
 
 # Compatibility
 
-|Model|AmberELEC|dArkOS|MuOS|ROCKNIX|KNULLI|
+|Model|[AmberELEC](https://github.com/AmberELEC)|[dArkOS](https://github.com/christianhaitian/dArkOS)|[MuOS](https://github.com/MustardOS)|[ROCKNIX](https://github.com/ROCKNIX)|[KNULLI](https://github.com/knulli-cfw)|
 |---|---|---|---|---|---|
-|RG40XX H/V| — | — | ✓ | ✓ (Panfrost) | ✓ |
-|R36S| ✓ | ✓ | — | — | — |
+|RG40XX H/V| ❔ | ❔ | ✅ | ✅ (Panfrost) | ✅ |
+|R36S| ✅ | ✅ | ❔ | ❔ | ❔ |
 
 ## Disclaimer
 
