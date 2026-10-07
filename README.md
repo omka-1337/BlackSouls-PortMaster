@@ -4,7 +4,7 @@ Thanks to [Eeny, meeny, miny, moe?](https://store.steampowered.com/app/3755860/B
 
 The game is paid, so only the engine ships here: mkxp-z, an open reimplementation of the RGSS runtime that RPG Maker VX Ace games run on. You supply the game's own files. The game renders at 640x480, so it is pixel for pixel on a 640x480 panel with no scaling.
 
-# Compatibility
+## Compatibility
 
 |Model|[AmberELEC](https://github.com/AmberELEC)|[dArkOS](https://github.com/christianhaitian/dArkOS)|[MuOS](https://github.com/MustardOS)|[ROCKNIX](https://github.com/ROCKNIX)|[KNULLI](https://github.com/knulli-cfw)|
 |---|---|---|---|---|---|
